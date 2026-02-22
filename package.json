@@ -1,0 +1,27 @@
+{
+  "name": "capacitor-demo",
+  "version": "1.0.0",
+  "description": "Capacitor app rendering Super Mario Demo in a fullscreen webview",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'No build step needed - static HTML'",
+    "cap:init": "npx cap add android",
+    "cap:sync": "npx cap sync",
+    "cap:open": "npx cap open android"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://local_proxy@127.0.0.1:61191/git/androidguy30/Capacitor-Demo"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@capacitor/android": "^8.1.0",
+    "@capacitor/cli": "^8.1.0",
+    "@capacitor/core": "^8.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
