@@ -29,6 +29,10 @@
       border: none;
       display: block;
       touch-action: manipulation;
+      user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      -webkit-touch-callout: none;
     }
   </style>
 </head>
@@ -41,6 +45,19 @@
     sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
   ></iframe>
   <script>
+    // Disable context menu (long-press menu) globally
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    }, { capture: true });
+
+    // Also attach directly to the iframe element
+    const iframe = document.getElementById('webview');
+    if (iframe) {
+      iframe.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+      }, { capture: true });
+    }
+
     // Disable zoom gestures
     document.addEventListener('gesturestart', function(e) { e.preventDefault(); }, { passive: false });
     document.addEventListener('gesturechange', function(e) { e.preventDefault(); }, { passive: false });

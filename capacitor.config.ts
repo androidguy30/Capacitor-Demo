@@ -4,10 +4,6 @@ const config: CapacitorConfig = {
   appId: 'com.demo.supermario',
   appName: 'Super Mario Demo',
   webDir: 'www',
-  server: {
-    url: 'https://super-mario-demo-eight.vercel.app/',
-    cleartext: false,
-  },
   android: {
     allowMixedContent: false,
     overScrollMode: 'never',
